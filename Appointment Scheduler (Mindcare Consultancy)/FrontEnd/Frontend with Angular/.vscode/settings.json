@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/4d53fbb2-eda9-40a4-a6c4-b5a50d1a2318/AppServices/subscriptions/4d53fbb2-eda9-40a4-a6c4-b5a50d1a2318/resourceGroups/Mindcare/providers/Microsoft.Web/sites/Mindcare123",
+    "appService.deploySubpath": "MindCare\\dist\\mind-care"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+
+
+</head>
+<body>
+
+<div class="container" style="margin-bottom: 340px; margin-left: -5px; margin-right: 7px;">
+<div class="table-wrapper">
+<div class="table-title">
+<div class="row">
+<div class="col-sm-8"><h2> <b> Doctor Details</b></h2></div>
+<div class="col-sm-4">
+  <button type="button" routerLink="AddDr" class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF" > <i class="fa fa-plus"></i> Add</button>
+
+  <button type="button" (click)="viewDoctor()" class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF;"><i class="fa fa-plus"></i> refresh</button>
+  <button type="button" routerLink="/Admin" class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF" > <i class="fa fa-plus"></i> Back</button>
+</div>
+</div>
+</div>
+<table class="table table-bordered" >
+<thead>
+<tr >
+  <th> Doctor Id</th>
+<th>Doctor Name</th>
+<th>Specialization</th>
+<th>About</th>
+<th>Availability</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let user of body">
+    <td> {{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.specialization}}</td>
+    <td>{{user.about}}</td>
+    <td>{{user.availability}}</td>
+
+    <td>
+<button class="add"  title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></button>
+<button class="edit "  title="Edit"  routerLink="editdoctor/{{user.id}}"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></button>
+
+<button class="delete" title="Delete" (click)=" Deletedoctor(user.id)" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+<!-- <button class="btn btn-primary" mwlConfirmationPopover[popoverTitle]="popoverTitle" [popoverMessage]="popoverMessage" placement="left"(confirm)="removeListElement(i)"(cancel)="cancelClicked = true">Delete</button> -->
+
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+</body>
+</html>

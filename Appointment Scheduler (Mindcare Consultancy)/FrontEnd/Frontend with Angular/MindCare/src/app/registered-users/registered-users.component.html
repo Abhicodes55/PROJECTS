@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+
+
+
+</head>
+<body>
+
+<div class="container" style="margin-bottom: 630px; margin-left: -5px; margin-right: 5px;">
+<div class="table-wrapper">
+<div class="table-title">
+<div class="row">
+<div class="col-sm-8" ><h2 style="padding-left: 500px;"> <b> User Details</b></h2></div>
+<div class="col-sm-4" routerLink="/Admin">
+  <button type="button"  class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF; margin-left: 200px;"><i class="fa fa-plus"></i> Back</button>
+ </div>
+</div>
+</div>
+<table class="table table-bordered" >
+<thead>
+<tr >
+  <th>UserID</th>
+<th>UserName</th>
+<th>Email</th>
+<th>Password</th>
+<th>Confirm Password</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.userName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.confirm_Password}}</td>
+
+    <td>
+<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+<button type="button" class="button" title="Delete" (click)="Deleteuser(user.id)" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
+
+
+

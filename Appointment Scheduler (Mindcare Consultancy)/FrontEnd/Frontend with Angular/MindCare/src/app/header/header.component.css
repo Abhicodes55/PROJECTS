@@ -1,0 +1,44 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+background: #007bff;
+background: linear-gradient(to right, #B1AFFF, #B2B2B2);
+}
+
+
+
+
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+}
+
+
+.nav-item.logo{
+padding-left: 20px;
+text-align: left;
+}
+.container{
+  padding-right: auto;
+}
+.btn{
+  border: 2px solid black;
+  background: linear-gradient( #B1AFFF);
+}
+.btn:hover{
+background-color: #B1B2FF;
+}
+
+

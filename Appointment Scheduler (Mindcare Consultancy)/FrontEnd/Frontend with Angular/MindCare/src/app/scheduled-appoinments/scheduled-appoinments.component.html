@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+
+
+
+</head>
+<body>
+
+<div class="container" style="margin-bottom: 330px; margin-left: -5px; margin-right: 7px;">
+<div class="table-wrapper">
+<div class="table-title">
+<div class="row">
+<div class="col-sm-8"><h2 style="margin-left: 480px;"> <b> Appointment Details</b></h2></div>
+<div class="col-sm-4" routerLink="/Admin">
+  <button type="button"  class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF; margin-left: 200px;"><i class="fa fa-plus"></i> Back</button>
+ </div>
+</div>
+</div>
+<table class="table table-bordered" >
+<thead>
+<tr >
+  <th> UserId</th>
+<th>Name</th>
+<th>Email</th>
+<th>Contact no.</th>
+<th>Appointment For</th>
+<th>Appointment Description</th>
+<th>Date</th>
+<th>Time</th>
+<th>How Long</th>
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let user of body">
+    <td> {{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.contactNumber}}</td>
+    <td>{{user.appointmentFor}}</td>
+    <td>{{user.appointmentDescription}}</td>
+<td>{{user.date}}</td>
+<td>{{user.time}}</td>
+<td>{{user.howLong}}</td>
+    <td>
+<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+<button class="edit " routerLink="updateappoint/{{user.id}}" (click)="OnEditClick(user.id)" title="Edit"    data-toggle="tooltip"><i class="material-icons">&#xE254;</i></button>
+<button class="delete" title="Delete" (click)=" Deleteappointment(user.id)" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+

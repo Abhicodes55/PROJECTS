@@ -1,0 +1,79 @@
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<div class="content"  ><div class="container-fluid "  >
+
+<div class= "form-center "  style="margin-left: 250px;  margin-bottom: 550px; ">
+
+	<div class="row main-content bg-success text-center " >
+		<div class="col-md-4 text-center company__info ">
+			<span class="company__logo"><h2><span class="fa fa-android"></span></h2></span>
+<img src="https://drmindcare.com//wp-content/uploads/2022/04/logo-footer.png">
+		</div>
+		<div class="col-md-8 col-xs-12 col-sm-12 login_form   ">
+			<div class="container-fluid "  >
+				<div class="row" >
+          <div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+            <strong>Registration Successfull  </strong> &nbsp;  &nbsp;
+            <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span area-hidden="true">&times;</span>
+            </button>
+
+				</div>
+        <h2>Register</h2>
+
+
+					<form [formGroup]="service.formModel" autocomplete="off" (ngSubmit)="onsubmit()"><!--autocomplete off will turn off recommendations while entering details-->
+						<div class="row ">
+							<input type="text" formControlName="UserName" name="username" id="username" class="form__input " placeholder="Username">
+						  <label  class="text-danger" *ngIf="service.formModel.get('UserName')?.touched && service.formModel.get('UserName')?.errors?.['required']">Username is a Mandatory field</label>
+              <label  class="text-danger" *ngIf="service.formModel.get('UserName')?.touched && service.formModel.get('UserName')?.errors?.['pattern']">Invalid Type</label>
+            </div>
+						<div class="row">
+							<input type="text"  formControlName="Email" name="Email" id="Email" class="form__input  " placeholder="Email">
+              <label  class="text-danger" *ngIf="service.formModel.get('Email')?.touched && service.formModel.get('Email')?.errors?.['pattern']  ">Please enter a Valid E-mail Adddress</label>
+            </div>
+						<div class="row">
+							<input type="password"  formControlName="Password" name="Password" id="password" class="form__input  " placeholder="Password">
+              <label  class="text-danger" *ngIf="service.formModel.get('Password')?.touched && service.formModel.get('Password')?.errors?.['required']">Password is a Mandatory field</label>
+			  <label  class="text-danger" *ngIf="service.formModel.get('Password')?.touched && service.formModel.get('Password')?.errors?.['pattern']">Password must contain 8 characters</label>
+
+            </div>
+						<div class="row">
+							<!-- <span class="fa fa-lock"></span> -->
+							<input type="password"  formControlName="Confirm_Password" name="Confirm password" id="Confirm password " class="form__input" placeholder="Confirm password">
+              <label  class="text-danger" *ngIf="service.formModel.get('Confirm_Password')?.touched && service.formModel.get('Confirm_Password')?.errors?.['required']">Confrim password is a mandator</label>
+
+           </div>
+						<div class="row">
+							<input type="submit" value="Submit" class="btn " >
+
+						</div>
+					</form>
+				</div>
+				</div>
+			</div>
+	</div>
+
+
+<!-- Main Content -->
+
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+

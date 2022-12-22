@@ -1,0 +1,148 @@
+.main-content{
+	width: 280%;
+    height: 0%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+
+
+
+
+
+}
+body {
+	background: #555;
+
+  }
+
+  .content {
+	max-width: 500px;
+	margin: auto;
+	background: white;
+	padding: 10px;
+
+  }
+
+.company__info{
+	background-color: #B1AFFF;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;
+		height: 1000px;
+	}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+		justify-content: center;
+		align-items: center;
+
+
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;
+		height: 1000px;}
+}
+.row > h2{
+	color:#B1AFFF;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+
+
+}
+form{
+
+	padding:10spx;
+  height: 450px;
+
+
+
+
+}
+
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #B1AFFF;
+	box-shadow: 0 0 5px rgba(0,80,80,.4);
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#B1AFFF;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #B1AFFF;
+
+	margin-bottom: 30px;
+  padding-left: 20px;
+  margin-left: 60px;
+
+
+}
+.btn:hover, .btn:focus{
+	background-color: #B1AFFF;
+	color:#fff;
+
+}
+.form__input.required>label:first-child:after{
+  content:"*";
+  color: crimson;
+  padding-left: 5px;
+
+
+}
+.alert{
+	height: 60px;
+	width: 500px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+   }
+   .close{
+    margin-left: 10px;
+   }
+
+   body {
+	background: #555;
+
+  }
+
+  .content {
+	max-width: 500px;
+	margin: auto;
+	background: white;
+	padding: 10px;
+
+  }
+
+
+

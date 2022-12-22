@@ -1,0 +1,121 @@
+.footer-wrap {
+    background: url(http://hassandesigns.top/html/classified/images/footer-bg.jpg) no-repeat top;
+    padding-top: 20px;
+    background-size: cover;
+    background: #007bff;
+background: linear-gradient(to right, #B1AFFF, #D8D9CF);
+
+
+}
+
+.footer-wrap h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.footer-wrap p {
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    margin-top: 15px;
+}
+
+.footer-wrap p a {
+    color: black;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.footer-wrap p a:hover {
+    text-decoration: none;
+    color: #98A8F8;
+}
+
+.footer-links li a {
+    font-size: 14px;
+    line-height: 26px;
+    color: black;
+    text-decoration: none;
+}
+
+
+.footer-links li:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    color: black;
+}
+
+.footer-category li a {
+    font-size: 14px;
+    line-height: 26px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-category li:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    color: black;
+}
+
+.address {
+
+    color: black;
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    line-height: 30px;
+}
+
+.address:before {
+    content: "\f277";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info a {
+
+    color: black;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.info a {
+
+    color: black;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.fa-fax:before {
+    content: "\f1ac";
+}
+
+.copyright {
+    border-top: 1px solid #98A8F8;
+    font-size: 20px;
+    color: black;
+    margin-top: 25px;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.con{
+  padding-left: 30px;
+}
+
+
+/* End section Fotrer */

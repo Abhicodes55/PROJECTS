@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div routerLink="/Admin"><i class="fa fa-arrow-circle-left" style="font-size :48px;color: black" ></i></div>
+<div class="container" style="margin-bottom: 730px; margin-left: -5px; margin-right: 5px;">
+<div class="table-wrapper">
+<div class="table-title">
+<div class="row">
+<div class="col-sm-8"><h2 style="margin-left: 500px;"> <b> User Details</b></h2></div>
+<div class="col-sm-4" routerLink="/Admin">
+  <button type="button"  class="btn btn-info add-new" style="background-color: #B1AFFF; border-color:#B1AFFF; margin-left: 200px;"><i class="fa fa-plus"></i> Back</button>
+ </div>
+</div>
+</div>
+<table class="table table-bordered" >
+<thead>
+<tr >
+  <th> UserId </th>
+<th>Name</th>
+<th>Email</th>
+<th>Contact no.</th>
+<th>Message</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let user of feedback">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.mobilePhone}}</td>
+    <td>{{user.message}}</td>
+
+    <td>
+<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+
+
+<button class="delete" title="Delete" (click)="Deletecontact(user.id)" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+

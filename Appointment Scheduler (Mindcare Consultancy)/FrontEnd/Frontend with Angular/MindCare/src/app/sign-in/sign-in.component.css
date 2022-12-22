@@ -1,0 +1,133 @@
+
+.main-content{
+	width: 120%;
+    height: 200%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+
+
+}
+.company__info{
+	background-color: #B1AFFF;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;
+		height: 1000px;
+	}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;
+		height: 1000px;}
+}
+.row > h2{
+	color:#B1AFFF;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+
+
+}
+
+form{
+	padding: 0 2em;
+
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #B1AFFF;
+	box-shadow: 0 0 5px rgba(0,80,80,.4);
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#B1AFFF;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #B1AFFF;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+.btn:hover, .btn:focus{
+	background-color: #B1AFFF;
+	color:#fff;
+}
+
+.alert{
+
+
+  margin-left: 80px;
+	padding:10px;
+	padding-left: -10px;
+	position:relative;
+	border-radius:5px;
+	box-shadow:0 0 15px 5px #ccc;
+	height: 60px;
+	margin-bottom: 50px;
+	margin-top: 300px;
+
+  }
+
+   .close{
+	margin-left: 5px;
+	  width:10px;
+	  height:10px;
+	margin-top: -28px;
+	  border-width:1px;
+	  margin-right: 20px;
+	  border-style:solid;
+	  border-radius:50%;
+	  text-align:center;
+	  font-size:1.6em;
+	  cursor:pointer;
+	float: right;
+	padding: .75rem .75rem;
+	color: black;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+  }
+
+
+
+
+
+
+

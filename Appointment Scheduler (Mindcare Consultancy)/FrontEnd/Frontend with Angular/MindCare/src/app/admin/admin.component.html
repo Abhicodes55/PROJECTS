@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+   <title>Document</title>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+
+<div class="profile">
+            <img src="https://us.123rf.com/450wm/lawangdesign/lawangdesign2009/lawangdesign200900011/155657201-boy-playing-at-computer.jpg?ver=6">
+            <h3>ADMIN</h3>
+
+        </div>
+
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a routerLink="Admin" >
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="registeredusers">
+                        <span class="icon"><i class='fas fa-address-book' style='font-size:20px'></i></span>
+                        <span class="item"> Users</span>
+                    </a>
+                <li >
+
+                <a routerLink="scheduleappoinments">
+                    <span class="icon"><i class='fas fa-bed'></i></span>
+                    <span class="item">Appoinments</span>
+                </a>
+                </li>
+
+                <li>
+                    <a routerLink="usersfeedback">
+                        <span class="icon"><i class='fas fa-user-friends' style='font-size:20px'></i></span>
+                        <span class="item"> Feedbacks</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="doctordetails">
+                        <span class="icon"><i class='fas fa-address-card' style='font-size:20px'></i></span>
+                        <span class="item"> Manage Doctors</span>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logout()">
+                        <span class="icon"><i class='fas fa-user-lock' style='font-size:18px'></i></span>
+                        <span class="item" > Log out </span>
+                    </a>
+                <li >
+
+            </ul>
+        </div>
+        </div>
+<h2 class="quote">"Healing takes time, and asking for <br> &nbsp; &nbsp; &nbsp; help is a courageous step" </h2>
+<div class="container">
+    <img src="assets/images/adminhome.jpg" style="width: 500px;">
+</div>
+
+</body>
+</html>
+

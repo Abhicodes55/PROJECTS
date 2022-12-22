@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://github.com/rubyeffect/easy_fill/tree/master/lib/easy_fill-0.0.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div id="container" style=" width:800px; height: 1300px; margin-left: 80px; margin-right: 320px; padding-top: 150px;">
+    <!--This is a division tag for body container-->
+    <div class="hello">
+    </div>
+
+    <div id="body_header">
+
+
+      <!--This is a division tag for body header-->
+      <h1 class="heading"> Appointment Request Form</h1>
+      <div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+        <strong>Appointment Successfull  </strong> &nbsp;
+        <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+          <span area-hidden="true" style="margin-top: -100px; ">&times;</span>
+
+        </button>
+
+    </div>
+<a>
+    <button  class="btn" (click)="logout()">Log out</button>
+</a>
+    </div>
+
+    <form [formGroup]="service1.AppoinmentModel" autocomplete="off" (ngSubmit)="BookAppoinments()">
+
+      <fieldset>
+        <legend><span class="number">1</span>Your basic details</legend>
+        <label for="name">Name*:</label>
+        <input type="text" formControlName="Name" id="name" name="user_name" placeholder="Human (Please Enter Your Full Name)" required pattern="[a-zA-Z0-9]+">
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('Name')?.touched && service1.AppoinmentModel.get('Name')?.errors?.['required']">Name is a Mandatory field</label>
+
+        <label for="mail">Email*:</label>
+        <input type="email" formControlName="Email" id="mail" name="user_email" placeholder="abc@xyz.com" required>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('Email')?.touched && service1.AppoinmentModel.get('Email')?.errors?.['required']">Email is a Mandatory field</label>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('Email')?.touched && service1.AppoinmentModel.get('Email')?.errors?.['pattern']">Enter a Valid Email Address</label>
+
+        <label   for="tel">Contact Number*:</label>
+        <input formControlName="ContactNumber"type="tel"  id="tel" placeholder=" Enter Contact Number(Don'Include country code) " name="user_num">
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('ContactNumber')?.touched && service1.AppoinmentModel.get('ContactNumber')?.errors?.['required']">Contact is a Mandatory field</label>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('ContactNumber')?.touched && service1.AppoinmentModel.get('ContactNumber')?.errors?.['pattern']">Please Enter 10 Digit Number</label>
+
+
+
+
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="number">2</span>Appointment Details*</legend>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('AppoinmentDetails')?.touched && service1.AppoinmentModel.get('AppoinmentDetails')?.errors?.['required']">Appoinment_Details is a Mandatory field</label>
+
+        <label for="AppointmentFor"  >Select Doctor*: </label>
+        <!-- <button class="abc" routerLink="Our-Story"> View Doctors</button> -->
+        <select  formControlName="AppointmentFor" routerlink="Our-Story" id="AppointmentFor" name="AppointmentFor"  required >
+
+          <option  *ngFor="let user of body" value="{{user.name}}-{{user.specialization}}" >{{user.name}} -{{user.specialization}}</option> <!-- <option formControlName="AppointmentFor" routerlink="Our-Story" value="Dr. Arpit Singh" >Dr. Arpit Singh -Psychiatrist</option>
+          <option formControlName="AppointmentFor" routerlink="Our-Story" value="Dr. Divya Sachdeva" >Dr. Divya Sachdeva -Psychotherapist</option>
+          <option  formControlName="AppointmentFor"routerlink="Our-Story" value="Dr. Prachi Panchal" >Dr. Prachi Panchal -Counselor</option>
+
+          <option routerlink="Our-Story" value="Dr. Sakshi Suryavanshi" >Dr. Sakshi Suryavanshi -Psychoanalyst</option> -->
+
+        </select>
+
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('AppointmentFor')?.touched && service1.AppoinmentModel.get('AppointmentFor')?.errors?.['required']">Appointment_for is a Mandatory field</label>
+
+        <label for="appointment_description">Appointment Description:</label>
+        <textarea id="appointment_description" formControlName="AppointmentDescription" name="appointment_description" placeholder="I wish to get an appointment for stress related health issues"></textarea>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('appointment_description')?.touched && service1.AppoinmentModel.get('appointment_description')?.errors?.['required']">Appointment_Description is a Mandatory field</label>
+
+
+
+        <label  for="date">Appointment Date*:</label>
+        <input type="date" min="{{minDate | date:'yyyy-MM-dd'}}" formControlName="Date" placeholder="Date"/>
+        <label  class="text-da nger" *ngIf="service1.AppoinmentModel.get('Date')?.touched && service1.AppoinmentModel.get('Date')?.errors?.['required']">Date is a Mandatory field</label>
+
+        <br>
+        <label for="time"> Appointment Time*:</label>
+        <input formControlName="Time"  type="time"  name="time" value="" required>
+        <label  class="text-danger" *ngIf="service1.AppoinmentModel.get('Time')?.touched && service1.AppoinmentModel.get('Time')?.errors?.['required']">Time is a Mandatory field</label>
+
+        <br>
+        <label for="duration">How Long??(Minutes)</label>
+        <input formControlName="HowLong" type="radio" name="duration" value="30" checked> 30
+        <input formControlName="HowLong" type="radio" name="duration" value="60"> 60
+        <input  formControlName="HowLong"type="radio" name="duration" value="90"> 90
+
+      </fieldset>
+      <button  >Request For Appointment</button>
+    </form>
+
+  </div>
+</body>
+
+</html>

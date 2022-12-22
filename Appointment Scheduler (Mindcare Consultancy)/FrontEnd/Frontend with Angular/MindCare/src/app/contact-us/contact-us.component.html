@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="contact-box" >
+
+			<div class="left"  >
+        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+          <strong>BINGO!   </strong> &nbsp;  &nbsp;  We Got Your Feedback
+          <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+          <span area-hidden="true">&times;</span>
+        </button>
+	</div>
+				<img src="https://img.freepik.com/free-vector/hand-drawn-visit-psychologist-concept_52683-69070.jpg?w=900&t=st=1667301295~exp=1667301895~hmac=c23098ba87022748345aabde30670fe3b228e88c4b73adb15ba39a04379bcf7c" style="height: 400px; width: 500px">
+			</div>
+
+			<div class="right" >
+
+        <h2>Contact Us</h2>
+        <form [formGroup]="service.ContactModel" (ngSubmit)="onsubmit()">
+				<input type="text" formControlName="Name" class="field" placeholder="Your Name">
+        <label  class="text-danger" *ngIf="service.ContactModel.get('Name')?.touched && service.ContactModel.get('Name')?.errors?.['required']">Name is a Mandatory field</label>
+				<input type="text" formControlName="Email"class="field" placeholder="Your Email">
+        <label  class="text-danger" *ngIf="service.ContactModel.get('Email')?.touched && service.ContactModel.get('Email')?.errors?.['required']">Email is a Mandatory field</label>
+        <label  class="text-danger" *ngIf="service.ContactModel.get('Email')?.touched && service.ContactModel.get('Email')?.errors?.['email']  && service.ContactModel.get('Email')?.errors?.['pattern']">Please Enter a Valid E-mail</label>
+				<input type="text" formControlName="MobilePhone" class="field" placeholder="Phone">
+        <label  class="text-danger" *ngIf="service.ContactModel.get('MobilePhone')?.touched && service.ContactModel.get('MobilePhone')?.errors?.['required']">Mobile Number is a Mandatory field</label>
+        <label  class="text-danger" *ngIf="service.ContactModel.get('MobilePhone')?.touched && service.ContactModel.get('MobilePhone')?.errors?.['pattern']">Please Enter 10 Digit Number</label>
+				<textarea placeholder="Message" formControlName="Message" class="field"></textarea>
+				<label  class="text-danger" *ngIf="service.ContactModel.get('Message')?.touched && service.ContactModel.get('Message')?.errors?.['required']">Message is a Mandatory field</label>
+				<button class="btn" [disabled]="!service.ContactModel.valid">Send</button>
+
+      </form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

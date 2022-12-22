@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+
+
+.wrapper .sidebar{
+    background: linear-gradient(to right, #B1AFFF, #D8D9CF);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 174%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: black;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: black;
+    font-size: 14px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #A66CFF;
+    color: black;
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: black;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #A084CA;
+
+    background: #EAEAEA;
+    border-right: 2px solid #8758FF;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #A084CA;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.container{
+margin-top: 10px;
+margin-left: 360px;
+margin-bottom: 300px;
+
+
+}
+.quote{
+    font-family:Comic Sans MS;
+margin-left: 180px;
+
+font-size: 40px;
+  font-weight: 600;
+  color: #4e225a;
+
+}

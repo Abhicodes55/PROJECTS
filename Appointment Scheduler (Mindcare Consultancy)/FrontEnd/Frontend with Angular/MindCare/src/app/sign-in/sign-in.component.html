@@ -1,0 +1,71 @@
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<title>Login Page</title>
+</head>
+<body >
+
+
+	<!-- Main Content -->
+	<div class="form-center " style="margin-left: 250px;  margin-bottom: 550px;  ">
+
+
+	<div class="container-fluid" >
+		<div class="row"  >
+			<div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+			  <strong>Username or password is incorrect  </strong> &nbsp;  &nbsp;
+			  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="close">
+			  <span area-hidden="true">&times;</span>
+			  </button>
+			</div>
+				  </div>
+		<div class="row main-content bg-success text-center">
+
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span class="fa fa-android"></span></h2></span>
+<img src="https://drmindcare.com//wp-content/uploads/2022/04/logo-footer.png">
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid" >
+					<div class="row">
+						<h2>Log In</h2>
+					</div>
+					<div class="row">
+						<form [formGroup]="user.LoginModel" class="form-group" (ngSubmit)="login()">
+							<div class="row">
+								<input formControlName="UserName" type="text" name="username" id="username" class="form__input" placeholder="Username">
+                <label  class="text-danger" *ngIf="user.LoginModel.get('UserName')?.touched && user.LoginModel.get('UserName')?.errors?.['required']">Username is a Mandatory field</label>
+				</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input formControlName="Password" type="password" name="password" id="password" class="form__input" placeholder="Password">
+                <label  class="text-danger" *ngIf="user.LoginModel.get('Password')?.touched &&user.LoginModel.get('Password')?.errors?.['required'] ">Password is a Mandatory field</label>
+
+              </div>
+							<div class="row1">
+								<input type="checkbox" name="remember_me" id="remember_me" class="remember">
+								<label for="remember_me">Remember Me!</label>
+							</div>
+							<div class="row">
+								<button   class="btn" >Submit</button>
+							</div>
+						</form>
+
+					</div>
+					<div class="row">
+						<p>Don't have an account? <a routerLink="Registration">Register Here</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- Footer -->
+
+
+
+
+
